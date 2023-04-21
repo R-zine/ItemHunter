@@ -54,7 +54,7 @@ export default function App() {
               name="Menu"
               component={Home}
               options={({ navigation }) => ({
-                headerTitle: (props) => <Text {...props}>Menu</Text>,
+                headerTitle: (props) => <Text {...props}>Item Hunter</Text>,
                 headerTitleStyle: { color: colors.light, fontSize: 18 },
                 headerRight: () => (
                   <Button
