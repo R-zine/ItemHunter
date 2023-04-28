@@ -12,7 +12,8 @@ export const WordSelect = ({ navigation }) => {
 
   const itemNames = Object.keys(items);
   const filteredItems = useMemo(
-    () => itemNames.filter((item) => item.includes(search.toLowerCase())),
+    () =>
+      itemNames.filter((item) => item.includes(search.toLowerCase())).sort(),
     [search]
   );
 

@@ -12,10 +12,10 @@ export const Info = () => {
         <Text style={styles.text}>
           The objective of the game is to find items around you. You can browse
           and select items from the "Item Selector" tab from the drawer menu on
-          the right.
+          the left.
         </Text>
         <Text style={styles.text}>
-          When you find your selected item, tap the "Check!" button on the top
+          When you find your selected item, tap the "Check" button on the top
           right and the AI will take a look at it to confirm you get a point!
         </Text>
       </View>

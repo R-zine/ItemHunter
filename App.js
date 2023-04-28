@@ -59,13 +59,20 @@ export default function App() {
                 headerRight: () => (
                   <Button
                     onPress={() => navigation.navigate("Detect!")}
-                    title="Check!"
+                    title="Check >"
                     color={colors.light}
                   />
                 ),
               })}
             />
-            <Stack.Screen name="Detect!" component={ModelView} />
+            <Stack.Screen
+              name="Detect!"
+              component={ModelView}
+              options={({ navigation }) => ({
+                headerTitle: (props) => <Text {...props}>Detecting...</Text>,
+                headerTitleStyle: { color: colors.light, fontSize: 18 },
+              })}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </PersistGate>

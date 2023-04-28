@@ -9,6 +9,7 @@ import { colors } from "../utils/colors";
 export function PredictionList({ predictions = [], isOver }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [isExpired, setIsExpired] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -18,6 +19,10 @@ export function PredictionList({ predictions = [], isOver }) {
   const rightAnswer = items[word];
   const predictionsWords = predictions.map((pred) => pred.className);
   const outcome = rightAnswer.some((item) => predictionsWords.includes(item));
+
+  useEffect(() => {
+    setTimeout(() => setIsExpired(true), 7000);
+  }, []);
 
   useEffect(() => {
     if (outcome) {
@@ -38,7 +43,6 @@ export function PredictionList({ predictions = [], isOver }) {
         transparent={false}
         visible={modalVisible}
         onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible);
         }}
       >
@@ -51,6 +55,28 @@ export function PredictionList({ predictions = [], isOver }) {
               isOver(true);
               dispatch(updateWord(""));
               dispatch(updateList([...list, word]));
+            }}
+          />
+        </View>
+      </Modal>
+      <Modal
+        animationType="slide"
+        transparent={false}
+        visible={isExpired}
+        onRequestClose={() => {
+          setModalVisible(false);
+        }}
+      >
+        <View style={styles.modalView}>
+          <Text style={styles.modalText}>
+            The AI could not detect {word}. &#128533;
+          </Text>
+          <Button
+            color={colors.red}
+            title="Item Selector"
+            onPress={() => {
+              isOver(true);
+              dispatch(updateWord(""));
             }}
           />
         </View>
