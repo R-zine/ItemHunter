@@ -1,10 +1,5 @@
 {
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@material-ui/utils": "^4.11.3",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.0",
     "@react-native-async-storage/async-storage": "1.17.11",
     "@react-navigation/drawer": "^6.6.2",
     "@react-navigation/native": "^6.1.6",
