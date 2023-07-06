@@ -1,10 +1,10 @@
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { colors } from "../utils/colors";
 
-export function LoadingView({ children, message = "" }) {
+export function LoadingView({ children, message = "", column }) {
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: column ? "column" : "row", padding: 5 }}>
         {!!message && <Text style={styles.text}>{message}</Text>}
         {children}
         <ActivityIndicator />

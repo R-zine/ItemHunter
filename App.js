@@ -22,7 +22,10 @@ export default function App() {
 
   if (!permission?.granted) {
     return (
-      <LoadingView message="This app needs camera permission to evaluate your drawings.">
+      <LoadingView
+        column
+        message="This app needs camera permission to validate the items you haveve found."
+      >
         <Button
           color={colors.red}
           title="Grant permission"
