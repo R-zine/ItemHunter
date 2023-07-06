@@ -24,7 +24,7 @@ export default function App() {
     return (
       <LoadingView
         column
-        message="This app needs camera permission to validate the items you haveve found."
+        message="This app needs camera permission to validate the items you have found."
       >
         <Button
           color={colors.red}

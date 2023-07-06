@@ -4,7 +4,13 @@ import { colors } from "../utils/colors";
 export function LoadingView({ children, message = "", column }) {
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: column ? "column" : "row", padding: 5 }}>
+      <View
+        style={{
+          flexDirection: column ? "column" : "row",
+          padding: 10,
+          gap: 20,
+        }}
+      >
         {!!message && <Text style={styles.text}>{message}</Text>}
         {children}
         <ActivityIndicator />
