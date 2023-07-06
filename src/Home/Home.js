@@ -12,7 +12,7 @@ export const Home = () => {
         headerStyle: {
           backgroundColor: colors.green,
         },
-        drawerActiveTintColor: colors.red,
+        drawerActiveTintColor: colors.yellow,
         drawerInactiveTintColor: colors.dark,
         drawerInactiveBackgroundColor: colors.yellow,
         drawerStyle: {
@@ -25,7 +25,7 @@ export const Home = () => {
         name="Info"
         options={() => ({
           headerTitle: (props) => <Text {...props}>Info</Text>,
-          headerTitleStyle: { color: colors.red, fontSize: 20 },
+          headerTitleStyle: { color: colors.yellow, fontSize: 20 },
           headerTintColor: colors.red,
         })}
         component={Info}
@@ -34,7 +34,7 @@ export const Home = () => {
         name="Progress"
         options={() => ({
           headerTitle: (props) => <Text {...props}>Your progress</Text>,
-          headerTitleStyle: { color: colors.red, fontSize: 20 },
+          headerTitleStyle: { color: colors.yellow, fontSize: 20 },
           headerTintColor: colors.red,
         })}
         component={Progress}
@@ -43,7 +43,7 @@ export const Home = () => {
         name="Item Selector"
         options={() => ({
           headerTitle: (props) => <Text {...props}>Item Selector</Text>,
-          headerTitleStyle: { color: colors.red, fontSize: 20 },
+          headerTitleStyle: { color: colors.yellow, fontSize: 20 },
           headerTintColor: colors.red,
         })}
         component={WordSelect}
